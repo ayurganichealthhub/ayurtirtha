@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vaidyā Kanchan | Aadishakti Ayurtirtha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Open+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600&family=Yeseva+One&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#d3413f",
+              accent: "#b45f06",
+            },
+            fontFamily: {
+              sans: ['"Open Sans"', "ui-sans-serif", "system-ui"],
+              heading: ["Oswald", "ui-sans-serif", "system-ui"],
+              serif: ["Lora", "ui-serif", "Georgia"],
+              display: ['"Yeseva One"', "cursive"],
+            },
+            boxShadow: {
+              soft: "0 12px 40px rgba(0,0,0,0.12)",
+            },
+            backgroundImage: {
+              "hero-pattern":
+                "linear-gradient(to right, rgba(38,38,38,0.75), rgba(38,38,38,0.45)), url('/public/images/image.png')",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-gray-50 font-sans text-slate-800 antialiased">
+    <header class="sticky top-0 z-50 bg-white/90 shadow backdrop-blur">
+      <div
+        class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 lg:px-6"
+      >
+        <div class="flex items-center gap-3">
+          <div
+            class="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white"
+          >
+            <span class="font-heading text-xl tracking-wide">VK</span>
+          </div>
+          <div>
+            <p
+              class="font-heading text-xl uppercase tracking-[0.25rem] text-slate-900"
+            >
+              Vaidyā Kanchan
+            </p>
+            <p class="text-sm text-slate-500">Aadishakti Ayurtirtha</p>
+          </div>
+        </div>
+        <button
+          id="nav-toggle"
+          class="inline-flex items-center justify-center rounded-md border border-slate-200 px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary lg:hidden"
+        >
+          <span>Menu</span>
+        </button>
+        <nav
+          id="nav-menu"
+          class="hidden flex-col items-center gap-6 text-sm font-semibold uppercase tracking-wide text-slate-700 lg:flex lg:flex-row"
+        >
+          <a class="hover:text-primary transition" href="#home">Home</a>
+          <a class="hover:text-primary transition" href="#about">About</a>
+          <a class="hover:text-primary transition" href="#services">Services</a>
+          <a class="hover:text-primary transition" href="#testimonials"
+            >Testimonials</a
+          >
+          <a class="hover:text-primary transition" href="#contact"
+            >Get in touch</a
+          >
+          <a
+            class="rounded-full bg-primary px-5 py-2 text-white shadow-sm transition hover:bg-primary/90"
+            href="https://calendly.com/vaidyaakanchan/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Book Appointment
+          </a>
+        </nav>
+      </div>
+      <div
+        id="mobile-nav"
+        class="hidden border-t border-slate-200 bg-white lg:hidden"
+      >
+        <div
+          class="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-4 text-sm font-semibold uppercase tracking-wide text-slate-700"
+        >
+          <a class="hover:text-primary transition" href="#home">Home</a>
+          <a class="hover:text-primary transition" href="#about">About</a>
+          <a class="hover:text-primary transition" href="#services">Services</a>
+          <a class="hover:text-primary transition" href="#testimonials"
+            >Testimonials</a
+          >
+          <a class="hover:text-primary transition" href="#contact"
+            >Get in touch</a
+          >
+          <a
+            class="rounded-full bg-primary px-5 py-2 text-center text-white shadow-sm transition hover:bg-primary/90"
+            href="https://calendly.com/vaidyaakanchan/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Book Appointment
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section
+        id="home"
+        class="relative flex min-h-[75vh] items-center bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800"
+      >
+        <div
+          class="relative mx-auto flex max-w-7xl flex-col items-center gap-12 px-4 py-12 text-center text-white md:flex-row md:items-center md:gap-10 md:text-left"
+        >
+          <div
+            class="w-full max-w-3xl overflow-hidden rounded-3xl shadow-soft ring-1 ring-white/20 md:w-2/3"
+          >
+            <img
+              src="public/images/image.png"
+              alt="Healing experience at Aadishakti Ayurtirtha"
+              class="h-full w-full object-cover"
+            />
+          </div>
+          <div
+            class="flex w-full max-w-md flex-col items-center gap-6 md:w-1/3 md:items-end md:text-right"
+          >
+            <span
+              class="font-display text-base uppercase tracking-[0.5rem] text-primary-100"
+            >
+              Welcome to
+            </span>
+            <h1
+              class="font-heading text-4xl uppercase tracking-widest sm:text-5xl lg:text-6xl"
+            >
+              Aadishakti Ayurtirtha
+            </h1>
+            <p class="max-w-xl text-lg text-slate-100 sm:text-xl">
+              Ayurveda practiced as a sacred experience—where ancient wisdom,
+              intuitive diagnosis and personalised rituals come together to
+              restore balance and vitality.
+            </p>
+            <div
+              class="flex flex-wrap items-center justify-center gap-4 md:justify-end"
+            >
+              <a
+                class="rounded-full bg-primary px-8 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-soft transition hover:bg-primary/90"
+                href="https://calendly.com/vaidyaakanchan/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Book Appointment
+              </a>
+              <a
+                class="rounded-full border border-white/70 px-8 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-white/10"
+                href="#about"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="bg-white py-20">
+        <div
+          class="mx-auto grid max-w-6xl gap-12 px-4 lg:grid-cols-2 lg:items-center lg:px-6"
+        >
+          <div class="space-y-6">
+            <span
+              class="inline-block font-heading text-sm uppercase tracking-[0.5rem] text-primary"
+            >
+              About Vaidyā Kanchan
+            </span>
+            <h2
+              class="font-heading text-3xl uppercase tracking-widest text-slate-900 sm:text-4xl"
+            >
+              With the blessings of Sadguru evam Samhita
+            </h2>
+            <p class="text-lg leading-relaxed text-slate-600">
+              I'm an Ayurveda doctor (B.A.M.S.), passionate about healing
+              through classical Ayurvedic traditions. My work blends ancient
+              scriptures with modern health needs, focusing on root-cause
+              healing through Nadi Pariksha, Panchakarma, herbal medicines, and
+              daily &amp; seasonal lifestyle protocols (Dinacharya, Ritucharya,
+              Ahara-Vihara).
+            </p>
+            <p class="text-lg leading-relaxed text-slate-600">
+              Together we created
+              <span class="font-semibold text-primary"
+                >Aadishakti Ayurtirtha</span
+              >
+              not merely as a place, but as a living tirtha — a sacred space
+              where ancient wisdom meets divine healing. Guided by the blessings
+              of Sadguru and rooted deeply in the sacred knowledge of the
+              Samhitas, this is a place where Ayurveda is not just practiced —
+              it is experienced in its purest, most authentic form.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <span
+                class="rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary"
+              >
+                Nadi Pariksha
+              </span>
+              <span
+                class="rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary"
+              >
+                Panchakarma
+              </span>
+              <span
+                class="rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary"
+              >
+                Herbal Protocols
+              </span>
+              <span
+                class="rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary"
+              >
+                Dinacharya &amp; Ritucharya
+              </span>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="relative overflow-hidden rounded-3xl shadow-soft">
+              <img
+                src="public/images/image2.png"
+                alt="Vaidyā Kanchan portrait"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div
+              class="absolute -bottom-10 -left-10 hidden w-40 rounded-3xl bg-primary/10 p-5 text-primary backdrop-blur lg:block"
+            >
+              <p class="font-heading text-5xl leading-none tracking-widest">
+                15+
+              </p>
+              <p class="mt-2 text-sm font-semibold uppercase tracking-[0.3rem]">
+                Years of Authentic Ayurveda
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="bg-gray-100 py-20">
+        <div class="mx-auto max-w-6xl px-4 text-center lg:px-6">
+          <span
+            class="font-heading text-sm uppercase tracking-[0.5rem] text-accent"
+            >Services</span
+          >
+          <h2
+            class="mt-4 font-heading text-3xl uppercase tracking-widest text-slate-900 sm:text-4xl"
+          >
+            Root-cause healing for body, mind &amp; spirit
+          </h2>
+          <p class="mx-auto mt-4 max-w-3xl text-base text-slate-600">
+            Each offering at Aadishakti Ayurtirtha combines time-tested
+            Ayurvedic wisdom with deeply personal guidance, ensuring every
+            journey is aligned with your unique prakriti.
+          </p>
+          <div class="mt-12 grid gap-8 md:grid-cols-2">
+            <article
+              class="group rounded-3xl bg-white p-8 text-left shadow-soft transition hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div class="flex items-center gap-4">
+                <span
+                  class="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 font-heading text-xl text-primary"
+                >
+                  01
+                </span>
+                <h3
+                  class="font-heading text-2xl uppercase tracking-[0.2rem] text-slate-900"
+                >
+                  Online Consultation
+                </h3>
+              </div>
+              <p class="mt-6 text-base leading-relaxed text-slate-600">
+                In-depth tele-consultations rooted in pulse reading, lifestyle
+                review and tailored herbal guidance to begin your healing
+                wherever you are.
+              </p>
+            </article>
+            <article
+              class="group rounded-3xl bg-white p-8 text-left shadow-soft transition hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div class="flex items-center gap-4">
+                <span
+                  class="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 font-heading text-xl text-primary"
+                >
+                  02
+                </span>
+                <h3
+                  class="font-heading text-2xl uppercase tracking-[0.2rem] text-slate-900"
+                >
+                  In-person Consultation
+                </h3>
+              </div>
+              <p class="mt-6 text-base leading-relaxed text-slate-600">
+                Experience a sacred, mindful environment designed for detailed
+                diagnosis, personalised rituals and immersive Ayurvedic
+                therapies.
+              </p>
+            </article>
+            <article
+              class="group rounded-3xl bg-white p-8 text-left shadow-soft transition hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div class="flex items-center gap-4">
+                <span
+                  class="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 font-heading text-xl text-primary"
+                >
+                  03
+                </span>
+                <h3
+                  class="font-heading text-2xl uppercase tracking-[0.2rem] text-slate-900"
+                >
+                  Vaidyāsiddh Aushadhi
+                </h3>
+              </div>
+              <p class="mt-6 text-base leading-relaxed text-slate-600">
+                House-formulated herbal preparations crafted in alignment with
+                classical texts, energised with mantra and personalised dosage
+                guidance.
+              </p>
+            </article>
+            <article
+              class="group rounded-3xl bg-white p-8 text-left shadow-soft transition hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div class="flex items-center gap-4">
+                <span
+                  class="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 font-heading text-xl text-primary"
+                >
+                  04
+                </span>
+                <h3
+                  class="font-heading text-2xl uppercase tracking-[0.2rem] text-slate-900"
+                >
+                  Panchakarma
+                </h3>
+              </div>
+              <p class="mt-6 text-base leading-relaxed text-slate-600">
+                Signature detoxification and rejuvenation programs—Snehana,
+                Swedana, Vamana, Virechana & Basti—designed to purify, replenish
+                and restore balance.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="relative overflow-hidden bg-primary py-20 text-white">
+        <div
+          class="absolute inset-0 bg-[url('https://lh3.googleusercontent.com/sitesv/AAzXCkeBFFvMPkCw709FnHk6-Xq1FX2wXbfWQRq3Dm54LWBnFIPRHO4ldOXBspKofMCoCfNXKbmfvwJNZA5Gj6au88JfxoU1KeCXsXi3sh1-iHQuRuyKUBp8ThTBNPnn1UmrvOAz3fWAnX3b-CzwPwAFa7Hn4qkNsFoK_GrMf4t4DTye2KvNZgb7FYDEmFTD51jIN_StqyTm9v0058bPLBQz3nximTEsZ3HnS8gJ214=w1280')] bg-cover bg-center opacity-20"
+        ></div>
+        <div
+          class="relative mx-auto flex max-w-5xl flex-col items-center gap-6 px-4 text-center lg:px-6"
+        >
+          <span class="font-heading text-sm uppercase tracking-[0.5rem]"
+            >Guided by tradition</span
+          >
+          <h2
+            class="font-heading text-4xl uppercase tracking-[0.6rem] sm:text-5xl"
+          >
+            Ayurveda experienced in its purest form
+          </h2>
+          <p class="max-w-3xl text-base text-white/80">
+            Every ritual, mantra and formulation at Aadishakti Ayurtirtha
+            honours the lineage of masters who preserved this knowledge. Step
+            into a tranquil space where you are seen, heard and healed.
+          </p>
+          <a
+            class="rounded-full bg-white px-10 py-3 text-sm font-semibold uppercase tracking-[0.4rem] text-primary transition hover:bg-white/90"
+            href="https://calendly.com/vaidyaakanchan/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Book Appointment
+          </a>
+        </div>
+      </section>
+
+      <section id="testimonials" class="bg-white py-20">
+        <div class="mx-auto max-w-6xl px-4 lg:px-6">
+          <span
+            class="font-display text-sm uppercase tracking-[0.5rem] text-accent"
+          >
+            What our patients say
+          </span>
+          <h2
+            class="mt-4 font-heading text-3xl uppercase tracking-widest text-slate-900 sm:text-4xl"
+          >
+            Transformations from the Ayurtirtha family
+          </h2>
+          <p class="mt-4 max-w-3xl text-base text-slate-600">
+            Glimpses from the journeys we are honoured to witness—stories of
+            resilience, relief and renewal inspired by authentic Panchakarma and
+            personalised care.
+          </p>
+          <div class="relative mt-12">
+            <div
+              class="overflow-hidden rounded-3xl bg-gradient-to-br from-orange-50 via-white to-amber-50 shadow-soft"
+            >
+              <div
+                id="testimonial-track"
+                class="flex transition-transform duration-700 ease-in-out"
+              >
+                <article class="w-full flex-shrink-0 px-6 py-12 sm:px-16">
+                  <div
+                    class="mx-auto flex max-w-3xl flex-col items-center gap-6 text-center"
+                  >
+                    <div class="text-2xl text-amber-500">★★★★★</div>
+                    <p class="text-lg leading-relaxed text-slate-700">
+                      I had been suffering from cervical pain for a long time,
+                      and I took therapy here, which was very effective. I
+                      experienced significant pain relief in the very first
+                      session, and after 4-5 sessions, my pain was completely
+                      gone. All credit goes to Dr. Kanchan because my problem
+                      was resolved, thanks to her ✨
+                    </p>
+                    <p
+                      class="font-heading text-sm uppercase tracking-[0.4rem] text-primary"
+                    >
+                      Miss Bhumika
+                    </p>
+                  </div>
+                </article>
+                <article class="w-full flex-shrink-0 px-6 py-12 sm:px-16">
+                  <div
+                    class="mx-auto flex max-w-3xl flex-col items-center gap-6 text-center"
+                  >
+                    <div class="text-2xl text-amber-500">★★★★★</div>
+                    <p class="text-lg leading-relaxed text-slate-700">
+                      I have been associated with Dr. Kanchan and Dr. Dishant
+                      for nearly 2 years. They are gem of a person. Very
+                      sincere, caring, patient and trustworthy, qualities less
+                      to be seen in any doctor lately. They have been messenger
+                      of God to me and my son in times of need. I am very
+                      grateful to them for all the support advice they have
+                      given to me. Their diagnosis and treatment is absolutely
+                      bang on. Deep gratitude 🙏🏻
+                    </p>
+                    <p
+                      class="font-heading text-sm uppercase tracking-[0.4rem] text-primary"
+                    >
+                      Shivani Dhawan
+                    </p>
+                  </div>
+                </article>
+                <article class="w-full flex-shrink-0 px-6 py-12 sm:px-16">
+                  <div
+                    class="mx-auto flex max-w-3xl flex-col items-center gap-6 text-center"
+                  >
+                    <div class="text-2xl text-amber-500">★★★★★</div>
+                    <p class="text-lg leading-relaxed text-slate-700">
+                      Visited Vaidya Kanchan and Vaidya Dishant like 2 weeks
+                      ago. I had severe migrane pain with repetitive attacks.
+                      Within the span, the severity of my pain has reduced and
+                      my digestion has suprisingly improved. I highly recommend
+                      them for authentic Ayurvedic trratment.
+                    </p>
+                    <p
+                      class="font-heading text-sm uppercase tracking-[0.4rem] text-primary"
+                    >
+                      Miss Jyoti
+                    </p>
+                  </div>
+                </article>
+                <article class="w-full flex-shrink-0 px-6 py-12 sm:px-16">
+                  <div
+                    class="mx-auto flex max-w-3xl flex-col items-center gap-6 text-center"
+                  >
+                    <div class="text-2xl text-amber-500">★★★★★</div>
+                    <p class="text-lg leading-relaxed text-slate-700">
+                      Mai apne high bp and, or heart ki pain chest pain ke liye
+                      kaafi samay se treatment le rha hu. Must say the vaidyas
+                      here in aadishakti ayurtirtha are humbl and truly doing
+                      their work in pure ayurveda honestly and faithfully. I
+                      recommend you must visit your health issues. Mai inke di
+                      hui advices abhi tak follow krt hu or mujhe bp ki dwai bhi
+                      roj nhi Leni pdti.
+                    </p>
+                    <p
+                      class="font-heading text-sm uppercase tracking-[0.4rem] text-primary"
+                    >
+                      Mr. Gian Chand
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <button
+              id="testimonial-prev"
+              type="button"
+              class="absolute left-3 top-1/2 -translate-y-1/2 rounded-full border border-primary/30 bg-white/80 p-3 text-primary shadow-soft transition hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+              aria-label="Show previous testimonial"
+            >
+              ‹
+            </button>
+            <button
+              id="testimonial-next"
+              type="button"
+              class="absolute right-3 top-1/2 -translate-y-1/2 rounded-full border border-primary/30 bg-white/80 p-3 text-primary shadow-soft transition hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+              aria-label="Show next testimonial"
+            >
+              ›
+            </button>
+            <div class="mt-8 flex justify-center gap-3">
+              <button
+                class="h-2.5 w-2.5 rounded-full bg-primary/30 opacity-60 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                type="button"
+                aria-label="Go to testimonial 1"
+                data-testimonial-dot="0"
+              ></button>
+              <button
+                class="h-2.5 w-2.5 rounded-full bg-primary/30 opacity-60 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                type="button"
+                aria-label="Go to testimonial 2"
+                data-testimonial-dot="1"
+              ></button>
+              <button
+                class="h-2.5 w-2.5 rounded-full bg-primary/30 opacity-60 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                type="button"
+                aria-label="Go to testimonial 3"
+                data-testimonial-dot="2"
+              ></button>
+              <button
+                class="h-2.5 w-2.5 rounded-full bg-primary/30 opacity-60 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                type="button"
+                aria-label="Go to testimonial 4"
+                data-testimonial-dot="3"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-gray-100 py-20">
+        <div class="mx-auto max-w-6xl px-4 lg:px-6">
+          <span
+            class="font-display text-sm uppercase tracking-[0.5rem] text-accent"
+          >
+            Stories &amp; insights
+          </span>
+          <h2
+            class="mt-4 font-heading text-3xl uppercase tracking-widest text-slate-900 sm:text-4xl"
+          >
+            Watch healing journeys unfold
+          </h2>
+          <div class="mt-12 grid gap-8 md:grid-cols-2">
+            <div class="aspect-video overflow-hidden rounded-3xl shadow-soft">
+              <iframe
+                class="h-full w-full"
+                src="https://www.youtube.com/embed/8lEdc_8tcPw"
+                title="Best Ayurvedic Panchakarma center | Delhi NCR #panchkarma #ayurved"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="aspect-video overflow-hidden rounded-3xl shadow-soft">
+              <iframe
+                class="h-full w-full"
+                src="https://www.youtube.com/embed/UZTSQ8HHcis"
+                title="“My Child saved from Surgery” A mother’s inspiring journey | Apta Ayurveda’s case study"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="aspect-video overflow-hidden rounded-3xl shadow-soft">
+              <iframe
+                class="h-full w-full"
+                src="https://www.youtube.com/embed/I43BT5o4QiU"
+                title="Rejuvenate Naturally with Apta Ayurveda: Ancient Care for Today’s Life"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="aspect-video overflow-hidden rounded-3xl shadow-soft">
+              <iframe
+                class="h-full w-full"
+                src="https://www.youtube.com/embed/TsBXK9vVdGs"
+                title="5000 साल पुरानी चिकित्सा पद्धति, आज भी कारगर! | Aadishakti Ayurtirtha"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="bg-white py-20">
+        <div
+          class="mx-auto grid max-w-6xl gap-12 px-4 lg:grid-cols-[1.2fr_0.8fr] lg:px-6"
+        >
+          <a
+            class="group relative block overflow-hidden rounded-3xl shadow-soft focus:outline-none focus-visible:ring-4 focus-visible:ring-primary/40"
+            href="https://www.google.com/maps/dir/?api=1&destination=28.437976,77.065457"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open directions to Aadishakti Ayurtirtha in Google Maps"
+          >
+            <iframe
+              class="pointer-events-none h-[360px] w-full transition group-hover:scale-[1.02]"
+              src="https://maps.google.com/maps?hl=en-US&ll=28.437997,77.065479&output=embed&q=28.437976,77.065457&z=17"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <div
+              class="pointer-events-none absolute inset-0 bg-black/0 transition group-hover:bg-black/10"
+              aria-hidden="true"
+            ></div>
+          </a>
+          <div class="flex flex-col justify-between gap-8">
+            <div>
+              <span
+                class="font-heading text-sm uppercase tracking-[0.5rem] text-accent"
+              >
+                Get in touch
+              </span>
+              <h2
+                class="mt-4 font-heading text-3xl uppercase tracking-[0.4rem] text-slate-900 sm:text-4xl"
+              >
+                Visit Aadishakti Ayurtirtha
+              </h2>
+              <p class="mt-6 text-base leading-relaxed text-slate-600">
+                3054, Artemis Road, Sector 46<br />
+                Gurugram, Haryana - 122022
+              </p>
+              <div class="mt-4 space-y-2 text-base text-slate-600">
+                <p>
+                  <span class="font-semibold text-slate-800">Phone:</span>
+                  <a
+                    class="ml-2 text-primary hover:underline"
+                    href="tel:+919599628322"
+                    >9599628322</a
+                  >
+                </p>
+                <p>
+                  <span class="font-semibold text-slate-800">Email:</span>
+                  <a
+                    class="ml-2 text-primary hover:underline"
+                    href="mailto:vd.kanchan001@gmail.com"
+                    >vd.kanchan001@gmail.com</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="space-y-4">
+              <div class="flex items-center gap-3">
+                <a
+                  class="flex h-12 w-12 items-center justify-center rounded-full bg-[#1877f2] text-white shadow-soft transition hover:opacity-90"
+                  href="https://www.facebook.com/vd.kanchan/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="https://ssl.gstatic.com/atari/images/sociallinks/facebook_white_36dp.png"
+                    alt="Facebook"
+                    class="h-6 w-6"
+                  />
+                </a>
+                <a
+                  class="flex h-12 w-12 items-center justify-center rounded-full bg-[#fe005c] text-white shadow-soft transition hover:opacity-90"
+                  href="http://instagram.com/vd.kanchan/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="https://ssl.gstatic.com/atari/images/sociallinks/instagram_white_36dp.png"
+                    alt="Instagram"
+                    class="h-6 w-6"
+                  />
+                </a>
+                <a
+                  class="flex h-12 w-12 items-center justify-center rounded-full bg-[#2867b2] text-white shadow-soft transition hover:opacity-90"
+                  href="https://in.linkedin.com/in/vaidya-kanchan-4689b522a"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="https://ssl.gstatic.com/atari/images/sociallinks/linkedin_white_36dp.png"
+                    alt="LinkedIn"
+                    class="h-6 w-6"
+                  />
+                </a>
+              </div>
+              <a
+                class="inline-flex items-center justify-center rounded-full bg-primary px-8 py-3 text-sm font-semibold uppercase tracking-[0.4rem] text-white shadow-soft transition hover:bg-primary/90"
+                href="https://calendly.com/vaidyaakanchan/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Book Appointment
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-slate-900 py-10 text-slate-300">
+      <div
+        class="mx-auto flex max-w-6xl flex-col gap-6 px-4 text-center text-sm lg:flex-row lg:items-center lg:justify-between lg:px-6"
+      >
+        <p
+          class="font-heading text-base uppercase tracking-[0.4rem] text-white"
+        >
+          Vaidyā Kanchan
+        </p>
+        <p class="text-xs text-slate-400">
+          © <span id="current-year"></span> Aadishakti Ayurtirtha. All Rights
+          Reserved.
+        </p>
+        <a
+          class="text-xs uppercase tracking-[0.3rem] text-primary hover:text-primary/80"
+          href="#home"
+        >
+          Back to top
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      const navToggle = document.getElementById("nav-toggle");
+      const mobileNav = document.getElementById("mobile-nav");
+      const navMenu = document.getElementById("nav-menu");
+      const yearTarget = document.getElementById("current-year");
+
+      navToggle?.addEventListener("click", () => {
+        mobileNav.classList.toggle("hidden");
+      });
+
+      mobileNav?.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => mobileNav.classList.add("hidden"));
+      });
+
+      if (yearTarget) {
+        yearTarget.textContent = new Date().getFullYear();
+      }
+
+      const testimonialTrack = document.getElementById("testimonial-track");
+
+      if (testimonialTrack) {
+        const testimonialSlides = Array.from(testimonialTrack.children);
+        const prevButton = document.getElementById("testimonial-prev");
+        const nextButton = document.getElementById("testimonial-next");
+        const dots = Array.from(
+          document.querySelectorAll("[data-testimonial-dot]")
+        );
+        let activeIndex = 0;
+        let autoTimer;
+
+        const setActiveSlide = (index) => {
+          testimonialTrack.style.transform = `translateX(-${index * 100}%)`;
+          dots.forEach((dot, dotIndex) => {
+            const isActive = dotIndex === index;
+            dot.classList.toggle("opacity-100", isActive);
+            dot.classList.toggle("opacity-60", !isActive);
+            dot.classList.toggle("bg-primary", isActive);
+            dot.classList.toggle("bg-primary/30", !isActive);
+          });
+        };
+
+        const goToSlide = (index) => {
+          if (!testimonialSlides.length) return;
+          activeIndex =
+            (index + testimonialSlides.length) % testimonialSlides.length;
+          setActiveSlide(activeIndex);
+        };
+
+        const stopAutoSlide = () => {
+          if (autoTimer) {
+            clearInterval(autoTimer);
+          }
+        };
+
+        const startAutoSlide = () => {
+          stopAutoSlide();
+          autoTimer = setInterval(() => {
+            goToSlide(activeIndex + 1);
+          }, 7000);
+        };
+
+        prevButton?.addEventListener("click", () => {
+          goToSlide(activeIndex - 1);
+          startAutoSlide();
+        });
+
+        nextButton?.addEventListener("click", () => {
+          goToSlide(activeIndex + 1);
+          startAutoSlide();
+        });
+
+        dots.forEach((dot, dotIndex) => {
+          dot.addEventListener("click", () => {
+            goToSlide(dotIndex);
+            startAutoSlide();
+          });
+        });
+
+        testimonialTrack
+          .closest(".relative")
+          ?.addEventListener("mouseenter", stopAutoSlide);
+        testimonialTrack
+          .closest(".relative")
+          ?.addEventListener("mouseleave", startAutoSlide);
+
+        setActiveSlide(activeIndex);
+        startAutoSlide();
+      }
+    </script>
+  </body>
+</html>
